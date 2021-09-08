@@ -4,11 +4,8 @@ project_name = "Simulation Engine";
 
 patterns = {
 	"*.c",
-	"*.cpp",
-	"*.ds",
 	"*.h",
 	"*.bat",
-	"*.sh",
 	"*.4coder",
 };
 
@@ -47,4 +44,4 @@ command_list = {
 };
 
 fkey_command[1] = "build";
-fkey_command[3] = "run";
+fkey_command[5] = "run";
