@@ -1,6 +1,8 @@
 #ifndef SE_MAIN_H
 #define SE_MAIN_H
 
+typedef struct se_core se_core_t;
+
 /* Standart libraries */
 #include <stdlib.h>
 #include <stdio.h>
@@ -17,7 +19,7 @@
 #include <limits.h>
 
 /* Simulation Engine */
-#include "core/core.h"
 #include "core/memmgr.h"
+#include "core/core.h"
 
 #endif
