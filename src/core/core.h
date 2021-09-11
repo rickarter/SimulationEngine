@@ -1,4 +1,4 @@
-struct se_core{
+struct se_core {
     bool is_running;
 };
 
@@ -11,3 +11,22 @@ se_core_t* se_core_init();
 * @brief Shutdowns subsystems
 */
 void se_core_shutdown(se_core_t* core);
+
+/**
+* Platform-specific functions
+*/
+
+/**
+* @brief Internal. Initializes platform-specific part of the core
+*/
+void se_core_platform_init(se_core_t* core);
+
+/**
+* @brief Internal. Shutdowns platform-specific part of the core
+*/
+void se_core_platform_shutdown(se_core_t* core);
+
+/**
+* @brief Internal. Polls platform events
+*/
+void se_core_platform_poll_events(se_core_t* core);
