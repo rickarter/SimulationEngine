@@ -1,3 +1,12 @@
+struct se_video_mode {
+    uint32_t width;
+    uint32_t height;
+};
+
+struct se_core_config {
+    se_video_mode_t video_mode;
+};
+
 struct se_core {
     bool is_running;
 };
@@ -5,7 +14,7 @@ struct se_core {
 /**
 * @brief Initializes subsystems
 */
-se_core_t* se_core_init();
+se_core_t* se_core_init(const se_core_config_t* params);
 
 /**
 * @brief Shutdowns subsystems
@@ -30,3 +39,5 @@ void se_core_platform_shutdown(se_core_t* core);
 * @brief Internal. Polls platform events
 */
 void se_core_platform_poll_events(se_core_t* core);
+
+static LRESULT CALLBACK se_win32_window_proc(HWND wnd, UINT msg, WPARAM wParam, LPARAM lParam);
