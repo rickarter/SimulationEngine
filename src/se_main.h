@@ -28,6 +28,7 @@ typedef struct se_core se_core_t;
 typedef struct se_core_config se_core_config_t;
 
 /* Simulation Engine */
+#include "core/log.h"
 #include "input/input.h"
 #include "core/time.h"
 #include "core/memmgr.h"

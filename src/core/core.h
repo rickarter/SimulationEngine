@@ -10,6 +10,10 @@ struct se_core_config {
 struct se_core {
     se_core_config_t params;
     bool is_running;
+    
+    struct {
+        HWND window;
+    } platform;
 };
 
 /**

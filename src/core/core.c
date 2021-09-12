@@ -9,15 +9,14 @@ se_core_t* se_core_init(const se_core_config_t* params)
     
     se_core_platform_init(core);
     
-    printf("Init\n");
-    
+    se_log("Init\n");
     return core;
 }
 
 void se_core_shutdown(se_core_t* core)
 {
     se_free(core);
-    printf("Shutdown\n");
+    se_log("Shutdown\n");
 }
 
 void se_core_platform_init(se_core_t* core)
@@ -32,7 +31,6 @@ void se_core_platform_init(se_core_t* core)
 	};
     
     RegisterClassEx(&wcx);
-    
     
     // NOTE(Eric): This code was for testing, do NOT use it! You can delete it.
     /*HWND window = CreateWindow(TEXT(SE_WINDOW_CLASS_NAME), TEXT("Dummy"), WS_OVERLAPPEDWINDOW, 0, 0, 1, 1, 0, 0, wcx.hInstance, 0);

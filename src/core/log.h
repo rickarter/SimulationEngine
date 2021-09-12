@@ -1,0 +1,1 @@
+void se_log(const char * message, ...);
