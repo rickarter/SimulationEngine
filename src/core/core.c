@@ -3,11 +3,11 @@
 se_core_t* se_core_init(const se_core_config_t* params)
 {
     se_core_t* core = SE_NEW(se_core_t);
+    
+    core->params = *params;
     core->is_running = true;
     
     se_core_platform_init(core);
-    
-    
     
     printf("Init\n");
     

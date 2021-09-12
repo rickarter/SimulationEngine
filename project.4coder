@@ -25,7 +25,7 @@ command_list = {
 		.out = "*compilation*",
 		.footer_panel = true,
 		.save_dirty_files = true,
-		.cursor_at_end = false,
+		.cursor_at_end = true,
 		.cmd = {
 			{ "build.bat", .os = "win" },
 		},
@@ -41,7 +41,19 @@ command_list = {
 			{ "run.bat", .os = "win" },
 		},
 	},
+
+	{
+		.name = "build and run",
+		.out = "*build and run*",
+		.footer_panel = true,
+		.save_dirty_files = true,
+		.cursor_at_end = true,
+		.cmd = {
+			{ "build.bat & run.bat", .os = "win" },
+		},
+	},
 };
 
 fkey_command[1] = "build";
-fkey_command[5] = "run";
+fkey_command[3] = "run";
+fkey_command[5] = "build and run";
