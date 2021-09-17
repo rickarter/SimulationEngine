@@ -11,5 +11,14 @@ int main()
     
     se_core_t* core = se_core_init(&config);
     
+	while(se_core_is_running(core))
+	{
+		se_event_t event;
+		if(se_core_poll_event(core, &event))
+		{
+
+		}
+	}
+
     se_core_shutdown(core);
 }

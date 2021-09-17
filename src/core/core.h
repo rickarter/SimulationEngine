@@ -17,6 +17,10 @@ struct se_core {
 };
 
 /**
+ * @brief returns true if engine is running
+*/
+bool se_core_is_running(se_core_t* core);
+/**
 * @brief Initializes subsystems
 */
 se_core_t* se_core_init(const se_core_config_t* params);
@@ -39,6 +43,16 @@ void se_core_platform_init(se_core_t* core);
 * @brief Internal. Shutdowns platform-specific part of the core
 */
 void se_core_platform_shutdown(se_core_t* core);
+
+/**
+ * @brief Pushes a new event into the event queue
+*/
+void se_core_push_event(se_core_t* core, se_event_t* event);
+
+/** 
+ * @brief Polls event from the event queue. Returns true if event was extracted
+*/
+bool se_core_poll_event(se_core_t* core, se_event_t* event);
 
 /**
 * @brief Internal. Polls platform events

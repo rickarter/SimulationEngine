@@ -51,6 +51,11 @@ Module.symvers
 Mkfile.old
 dkms.conf
 
-#Builds
+# Binaries and builds
 /[Bb]ild/
 /[Bb]ilds/
+/[Bb]in/
+
+# Project files
+*.vim
+*.4coder
