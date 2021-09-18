@@ -12,7 +12,7 @@ se_core_t* se_core_init(const se_core_config_t* params)
     core->params = *params;
     core->is_running = true;
     
-    se_core_platform_init(core);
+	se_core_platform_init(core);
     
     se_log("Init");
     return core;

@@ -15,7 +15,7 @@ void* se_calloc(size_t count, size_t size);
 * @brief Reallocates memory
 * @params ptr pointer
 */
-void se_realloc(void* ptr, size_t size);
+void* se_realloc(void* ptr, size_t size);
 
 /**
 * @brief Frees memory
