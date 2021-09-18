@@ -25,8 +25,11 @@ int main()
 	SE_ARRAY_DECLARE(int, myarray);
 	SE_ARRAY_INIT(myarray);
 
-	printf("Hello man");
-
+	//se_array_grow_((void**)&myarray.data, &myarray.used, &myarray._size, sizeof(*myarray.data), 1);
+	SE_ARRAY_APPEND(myarray, 16);
+	SE_ARRAY_APPEND(myarray, 618);
+	printf("%d\n", myarray.data[0]);
+	printf("%d\n", myarray.data[1]);
 	SE_ARRAY_FREE(myarray);
 
 	return 0;
