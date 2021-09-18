@@ -27,9 +27,13 @@ int main()
 
 	//se_array_grow_((void**)&myarray.data, &myarray.used, &myarray._size, sizeof(*myarray.data), 1);
 	SE_ARRAY_APPEND(myarray, 16);
-	SE_ARRAY_APPEND(myarray, 618);
+	SE_ARRAY_APPEND(myarray, 18);
+	SE_ARRAY_APPEND(myarray, 68);
+	SE_ARRAY_APPEND(myarray, 12);
+	SE_ARRAY_REMOVE_AT(myarray, 0);
 	printf("%d\n", myarray.data[0]);
 	printf("%d\n", myarray.data[1]);
+	printf("%d\n", (int) myarray.used);
 	SE_ARRAY_FREE(myarray);
 
 	return 0;

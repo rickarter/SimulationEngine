@@ -17,6 +17,16 @@
 		(Name).data[(Name).used - 1] = (item); \
 	} while(0)
 
+#define SE_ARRAY_REMOVE_AT(Name, index) \
+	do { \
+		if ((int)(index) >= 0 && (index) < (Name).used) { \
+			--(Name).used; \
+			for(size_t __i = (index); __i < (Name).used; ++__i) { \
+				(Name).data[__i] = (Name).data[__i + 1];\
+			} \
+		} \
+	} while(0)
+
 void se_array_init_(void** data, size_t* used, size_t* size);
 
 void se_array_grow_(void** data, size_t* used, size_t* size, size_t item_size, size_t n);

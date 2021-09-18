@@ -47,8 +47,6 @@ void* se_realloc(void* ptr, size_t size)
 		--se_alloc_count;
 	}
 
-	se_log("Reallocation isn't fully implemented");
-
 	return mem;
 }
 
