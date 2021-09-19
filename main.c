@@ -9,8 +9,8 @@ int main()
         }
     };
     
-	//se_core_t* core = se_core_init(&config);
-//    
+	se_core_t* core = se_core_init(&config);
+    
 //	while(se_core_is_running(core))
 //	{
 //		se_event_t event;
@@ -20,21 +20,7 @@ int main()
 //		}
 //	}
 
-    //se_core_shutdown(core);
-
-	SE_ARRAY_DECLARE(int, myarray);
-	SE_ARRAY_INIT(myarray);
-
-	//se_array_grow_((void**)&myarray.data, &myarray.used, &myarray._size, sizeof(*myarray.data), 1);
-	SE_ARRAY_APPEND(myarray, 16);
-	SE_ARRAY_APPEND(myarray, 18);
-	SE_ARRAY_APPEND(myarray, 68);
-	SE_ARRAY_APPEND(myarray, 12);
-	SE_ARRAY_REMOVE_AT(myarray, 0);
-	printf("%d\n", myarray.data[0]);
-	printf("%d\n", myarray.data[1]);
-	printf("%d\n", (int) myarray.used);
-	SE_ARRAY_FREE(myarray);
+   se_core_shutdown(core);
 
 	return 0;
 }
